@@ -5,7 +5,6 @@ using namespace std;
 
 //*******************************************************************************************************************************
 //*************                         STUDENT NAME: BEYZA KOMİŞ                                              ******************
-//*************                         STUDENT NUMBER: B231202072                                             ******************
 //*************                         ASSİGNMENT #: ASİGNMENT 1                                              ******************
 //*************                   i did it all from my knowledge that i gained overtime                        ******************
 //*******************************************************************************************************************************
@@ -51,24 +50,24 @@ for (int  i = 1; i <= n; i++)//Using the for loop in order to calculate every it
     double e=xi+x/2;              //Let e be the midpoints of two interval steps
 
 //According to f(x)=x^3+4x
-double m=(xi*xi*xi+4*xi)*x;          //Function for the xi...f(xi) for the LHF and multiplying it with delta in order to find the area of each subinterval.
-double k=(yi*yi*yi+4*yi)*x;          //Function for the xi...f(xi+1) for the RHF and multiplying it with delta in order to find the area of each subinterval.
-double t=(e*e*e+4*e)*x;              //Function for the xi...f(e) for the MF and multiplying it with delta in order to find the area of each subinterval.
+double m=( xi*xi*xi + 4*xi ) *x;          //Function for the xi...f(xi) for the LHF and multiplying it with delta in order to find the area of each subinterval.
+double k=( yi*yi*yi + 4*yi ) *x;          //Function for the xi...f(xi+1) for the RHF and multiplying it with delta in order to find the area of each subinterval.
+double t=( e*e*e + 4*e ) *x;              //Function for the xi...f(e) for the MF and multiplying it with delta in order to find the area of each subinterval.
 
 //Printing out the functions by using setw(left) to have blank spaces in between 
-cout<<setw(10)<<left<<i<<setw(10)<<left<<xi<<setw(10)<<left<<e<<setw(10)<<left<<m<<setw(10)<<left<<k<<setw(10)<<left<<t<<endl;
+cout<< setw(10) << left << i << setw(10) << left << xi << setw(10) << left << e << setw(10) << left << m << setw(10) << left << k << setw(10) << left << t <<endl;
 
 //Summing out every function value
-sum1+=m;
-sum2+=k;
-sum3+=t;
+sum1 += m;
+sum2 += k;
+sum3 += t;
 
 }
 
 
 //Printing out the sum of the each function
 cout<<"------------------------------------------------------------------------------------------------------------------"<<endl;
-cout<<"f(x)=x^3+4x from [0,10] with  "<< n <<"  intervals"<<endl;
+cout<<" f(x)=x^3+4x from [0,10] with  "<< n <<"  intervals"<<endl;
 cout<<endl;
 cout<<"LEFT HAND RULE= "<<sum1<<endl;
 cout<<"RiGHT HAND RULE= "<<sum2<<endl;
